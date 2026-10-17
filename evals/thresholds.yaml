@@ -1,0 +1,10 @@
+# CI eval gate for the shipped setup (hybrid strategy, offline glossary translator, extractive
+# answers, threshold = DEFAULT_MIN_RELEVANCE). `mlrag eval` exits 1 if any value is missed.
+# Set a little below the measured values in docs/results.md, so the gate catches real
+# regressions (a broken stemmer, a glossary that stops loading) without failing on noise.
+strategy: hybrid
+max_mrr_gap: 0.15          # FI MRR minus EN/VI MRR on the same questions
+min:
+  fi: {hit_at_5: 0.95, mrr: 0.90, answer_rate: 0.65, citation_valid: 0.95, refusal_acc: 0.85}
+  en: {hit_at_5: 0.90, mrr: 0.85, answer_rate: 0.60, citation_valid: 0.95, refusal_acc: 0.60}
+  vi: {hit_at_5: 0.90, mrr: 0.85, answer_rate: 0.45, citation_valid: 0.95, refusal_acc: 0.85}

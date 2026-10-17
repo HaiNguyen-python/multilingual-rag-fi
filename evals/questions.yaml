@@ -1,0 +1,321 @@
+# Evaluation set: every question is written in Finnish, English and Vietnamese with the same
+# meaning. `pages` lists the page ids that contain the answer; `expected` is a short reference
+# answer; `key` is a string from the Finnish source sentence that a correct extractive answer
+# must contain (numbers where possible, so the check works whatever the question language).
+# Unanswerable questions have no pages: the right behaviour is to refuse.
+
+answerable:
+  - id: q01
+    pages: [kirjastokortti]
+    expected: No, the library card is free.
+    key: maksuton
+    fi: Maksaako kirjastokortti jotain?
+    en: Does a library card cost anything?
+    vi: Làm thẻ thư viện có mất phí không?
+  - id: q02
+    pages: [kirjastokortti]
+    expected: An identity document, for example a passport, ID card or driving licence.
+    key: henkilöllisyystodistus
+    fi: Mitä minun pitää ottaa mukaan, kun haen kirjastokorttia?
+    en: What do I need to bring to get a library card?
+    vi: Tôi cần mang theo gì khi đi làm thẻ thư viện?
+  - id: q03
+    pages: [kirjastokortti]
+    expected: Yes, with written consent from a guardian (under 15-year-olds).
+    key: huoltajan
+    fi: Voiko 12-vuotias lapsi saada oman kirjastokortin?
+    en: Can a 12-year-old child get their own library card?
+    vi: Trẻ 12 tuổi có được làm thẻ thư viện riêng không?
+  - id: q04
+    pages: [kirjastokortti]
+    expected: A new library card costs 3 euros.
+    key: 3 euroa
+    fi: Paljonko uusi kortti maksaa, jos kirjastokortti katoaa?
+    en: How much is a new card if I lose my library card?
+    vi: Nếu mất thẻ thư viện thì làm thẻ mới tốn bao nhiêu?
+  - id: q05
+    pages: [kirjaston-lainat]
+    expected: 28 days for most books.
+    key: "28"
+    fi: Kuinka pitkä on kirjan laina-aika?
+    en: How long can I keep a borrowed book?
+    vi: Tôi được mượn sách trong bao lâu?
+  - id: q06
+    pages: [kirjaston-lainat]
+    expected: Five times, if nobody has reserved the item.
+    key: viisi
+    fi: Montako kertaa lainan voi uusia?
+    en: How many times can I renew a loan?
+    vi: Tôi có thể gia hạn sách mượn bao nhiêu lần?
+  - id: q07
+    pages: [kirjaston-lainat]
+    expected: 0.20 euros per day, at most 6 euros per loan.
+    key: "0,20"
+    fi: Paljonko myöhästymismaksu on päivässä?
+    en: What is the late fee per day?
+    vi: Phí trả sách trễ là bao nhiêu mỗi ngày?
+  - id: q08
+    pages: [kirjaston-lainat]
+    expected: Seven days.
+    key: seitsemän
+    fi: Kuinka kauan varattu kirja odottaa noutohyllyssä?
+    en: How long does a reserved book wait for me on the pickup shelf?
+    vi: Sách đã đặt trước được giữ ở kệ nhận sách trong bao lâu?
+  - id: q09
+    pages: [kirjaston-tilat]
+    expected: 0.30 euros per black-and-white page, 1 euro per colour page.
+    key: "0,30"
+    fi: Paljonko tulostaminen maksaa kirjastossa?
+    en: How much does printing cost at the library?
+    vi: In tài liệu ở thư viện tốn bao nhiêu tiền?
+  - id: q10
+    pages: [kirjaston-tilat]
+    expected: Yes, for 14 days; equipment cannot be reserved.
+    key: ompelukoneen
+    fi: Voiko kirjastosta lainata ompelukoneen?
+    en: Can I borrow a sewing machine from the library?
+    vi: Tôi có thể mượn máy may ở thư viện không?
+  - id: q11
+    pages: [joukkoliikenne-liput]
+    expected: 80 minutes.
+    key: 80 minuuttia
+    fi: Kuinka kauan kertalippu on voimassa?
+    en: How long is a single ticket valid?
+    vi: Vé lượt có hiệu lực trong bao lâu?
+  - id: q12
+    pages: [joukkoliikenne-liput]
+    expected: No, the driver only accepts bank cards.
+    key: käteisellä
+    fi: Voiko bussissa maksaa käteisellä?
+    en: Can I pay with cash on the bus?
+    vi: Tôi có thể trả tiền mặt trên xe buýt không?
+  - id: q13
+    pages: [joukkoliikenne-liput]
+    expected: 9 euros.
+    key: 9 euroa
+    fi: Paljonko vuorokausilippu maksaa?
+    en: How much is a day ticket?
+    vi: Vé ngày giá bao nhiêu?
+  - id: q14
+    pages: [joukkoliikenne-liput]
+    expected: Children under 7 travel free with an adult.
+    key: 7-vuotiaat
+    fi: Matkustavatko pienet lapset ilmaiseksi?
+    en: Do small children travel for free?
+    vi: Trẻ nhỏ có được đi xe miễn phí không?
+  - id: q15
+    pages: [joukkoliikenne-liput]
+    expected: An 80-euro inspection fee.
+    key: 80 euroa
+    fi: Mikä on tarkastusmaksu, jos matkustan ilman lippua?
+    en: What is the fine for travelling without a ticket?
+    vi: Đi xe không có vé thì bị phạt bao nhiêu?
+  - id: q16
+    pages: [matkakortti]
+    expected: 55 euros for an adult.
+    key: "55"
+    fi: Paljonko 30 päivän kausilippu maksaa?
+    en: How much is a 30-day season ticket?
+    vi: Vé tháng 30 ngày giá bao nhiêu?
+  - id: q17
+    pages: [matkakortti]
+    expected: At the city service point; the card costs 5 euros.
+    key: asiointipisteestä
+    fi: Mistä saan matkakortin?
+    en: Where can I get a travel card?
+    vi: Tôi có thể làm thẻ đi xe ở đâu?
+  - id: q18
+    pages: [matkakortti]
+    expected: A personal card can be closed and the season ticket moved to a new card.
+    key: sulkea
+    fi: Mitä teen, jos matkakorttini katoaa?
+    en: What should I do if I lose my travel card?
+    vi: Tôi phải làm gì nếu bị mất thẻ đi xe?
+  - id: q19
+    pages: [asukaspysakointi]
+    expected: 30 euros per month.
+    key: 30 euroa
+    fi: Paljonko asukaspysäköintitunnus maksaa?
+    en: How much does a resident parking permit cost?
+    vi: Giấy phép đỗ xe cho cư dân giá bao nhiêu?
+  - id: q20
+    pages: [asukaspysakointi]
+    expected: No, the permit is electronic.
+    key: sähköinen
+    fi: Pitääkö asukaspysäköintitunnus laittaa auton tuulilasiin?
+    en: Do I need to put the resident parking permit on the windscreen?
+    vi: Tôi có cần dán giấy phép đỗ xe cư dân lên kính chắn gió không?
+  - id: q21
+    pages: [muuttoilmoitus]
+    expected: At the latest one week after moving.
+    key: viikon
+    fi: Mihin mennessä muuttoilmoitus pitää tehdä?
+    en: When do I have to report my change of address?
+    vi: Tôi phải báo thay đổi địa chỉ trong thời hạn nào?
+  - id: q22
+    pages: [muuttoilmoitus]
+    expected: No, it is free.
+    key: maksuton
+    fi: Maksaako muuttoilmoituksen tekeminen?
+    en: Is there a fee for reporting a change of address?
+    vi: Báo thay đổi địa chỉ có mất phí không?
+  - id: q23
+    pages: [muuttoilmoitus]
+    expected: No, mail forwarding must be ordered separately and costs money.
+    key: jälkilähetys
+    fi: Siirtyykö postini automaattisesti uuteen osoitteeseen?
+    en: Will my mail be forwarded automatically to my new address?
+    vi: Thư từ của tôi có tự động chuyển đến địa chỉ mới không?
+  - id: q24
+    pages: [jatteiden-lajittelu]
+    expected: No; wrap biowaste in newspaper or a biodegradable bag.
+    key: Muovipussia
+    fi: Saako biojätteen laittaa muovipussiin?
+    en: Can I put biowaste in a plastic bag?
+    vi: Tôi có được bỏ rác hữu cơ vào túi ni lông không?
+  - id: q25
+    pages: [jatteiden-lajittelu]
+    expected: Carton collection, rinsed and flattened.
+    key: kartonkikeräykseen
+    fi: Mihin maitotölkit lajitellaan?
+    en: Where do milk cartons go?
+    vi: Hộp sữa giấy thì bỏ vào thùng rác nào?
+  - id: q26
+    pages: [jatteiden-lajittelu]
+    expected: Mixed waste.
+    key: vaipat
+    fi: Mihin laitan vaipat?
+    en: Where do I throw away diapers?
+    vi: Tã bỉm thì bỏ vào đâu?
+  - id: q27
+    pages: [jatteiden-lajittelu]
+    expected: Return them to the machines in shops.
+    key: palautusautomaatteihin
+    fi: Mitä teen pantillisille pulloille?
+    en: What do I do with deposit bottles?
+    vi: Chai có tiền ký gửi thì xử lý thế nào?
+  - id: q28
+    pages: [vaarallinen-jate]
+    expected: To a pharmacy, free of charge.
+    key: apteekkiin
+    fi: Mihin vanhat lääkkeet viedään?
+    en: Where do I take old medicines?
+    vi: Thuốc cũ hết hạn thì mang đi đâu?
+  - id: q29
+    pages: [vaarallinen-jate]
+    expected: To the collection boxes in shops, free of charge.
+    key: keräyslaatikoihin
+    fi: Mihin voin palauttaa käytetyt paristot?
+    en: Where can I return used batteries?
+    vi: Pin đã qua sử dụng thì trả lại ở đâu?
+  - id: q30
+    pages: [jateasema]
+    expected: 9 to 15 on Saturdays.
+    key: 9–15
+    fi: Milloin jäteasema on auki lauantaina?
+    en: What are the waste station's opening hours on Saturday?
+    vi: Trạm xử lý rác mở cửa mấy giờ vào thứ Bảy?
+  - id: q31
+    pages: [jateasema]
+    expected: 40 euros for up to three items.
+    key: 40 euroa
+    fi: Paljonko vanhan sohvan nouto kotoa maksaa?
+    en: How much does it cost to have an old sofa picked up from home?
+    vi: Thuê người đến nhà lấy ghế sofa cũ tốn bao nhiêu?
+  - id: q32
+    pages: [terveysasema]
+    expected: Contact the health centre by phone or chat; a nurse assesses and books the time.
+    key: puhelimitse
+    fi: Miten varaan ajan terveysasemalle?
+    en: How do I book an appointment at the health centre?
+    vi: Làm sao để đặt lịch khám ở trạm y tế?
+  - id: q33
+    pages: [terveysasema]
+    expected: 20.90 euros for an adult; free under 18.
+    key: "20,90"
+    fi: Paljonko lääkärikäynti terveysasemalla maksaa?
+    en: How much does a doctor's visit at the health centre cost?
+    vi: Khám bác sĩ ở trạm y tế tốn bao nhiêu tiền?
+  - id: q34
+    pages: [paivystys]
+    expected: The medical helpline 116 117.
+    key: 116 117
+    fi: Mihin numeroon soitan kiireellisessä mutta ei hengenvaarallisessa tilanteessa?
+    en: Which number do I call for urgent care when it is not life-threatening?
+    vi: Tôi gọi số nào khi cần chăm sóc khẩn cấp nhưng không nguy hiểm đến tính mạng?
+  - id: q35
+    pages: [hammashoito]
+    expected: Call dental appointments first thing in the morning.
+    key: aamulla
+    fi: Mitä teen, jos minulla on kova hammassärky?
+    en: What should I do if I have a bad toothache?
+    vi: Tôi phải làm gì nếu bị đau răng dữ dội?
+  - id: q36
+    pages: [tyovaenopisto]
+    expected: Yes, a 50 per cent discount.
+    key: "50"
+    fi: Saako työtön alennusta kurssimaksusta?
+    en: Do unemployed people get a discount on course fees?
+    vi: Người thất nghiệp có được giảm học phí khóa học không?
+  - id: q37
+    pages: [suomen-kurssit]
+    expected: Some courses prepare for the YKI test; register for the test separately.
+    key: YKI
+    fi: Valmentavatko kurssit YKI-testiin?
+    en: Do the courses prepare me for the YKI test?
+    vi: Các khóa học có luyện thi YKI không?
+  - id: q38
+    pages: [uimahalli]
+    expected: 6.50 euros.
+    key: "6,50"
+    fi: Paljonko aikuisen lippu uimahalliin maksaa?
+    en: How much is an adult ticket to the swimming hall?
+    vi: Vé bơi cho người lớn giá bao nhiêu?
+  - id: q39
+    pages: [verokortti]
+    expected: The employer withholds 60 per cent tax.
+    key: "60"
+    fi: Mitä tapahtuu, jos en anna verokorttia työnantajalle?
+    en: What happens if I don't give my tax card to my employer?
+    vi: Điều gì xảy ra nếu tôi không nộp thẻ thuế cho chủ lao động?
+  - id: q40
+    pages: [muutosverokortti]
+    expected: When your income changes during the year.
+    key: tulosi
+    fi: Milloin minun kannattaa tehdä muutosverokortti?
+    en: When should I get a revised tax card?
+    vi: Khi nào tôi nên làm thẻ thuế điều chỉnh?
+
+unanswerable:
+  - id: u01
+    fi: Paljonko kalastuslupa maksaa?
+    en: How much does a fishing licence cost?
+    vi: Giấy phép câu cá giá bao nhiêu?
+  - id: u02
+    fi: Miten haen asumistukea?
+    en: How do I apply for housing allowance?
+    vi: Làm sao để xin trợ cấp nhà ở?
+  - id: u03
+    fi: Saako koiran ottaa mukaan bussiin?
+    en: Can I take my dog on the bus?
+    vi: Tôi có được mang chó lên xe buýt không?
+  - id: u04
+    fi: Milloin kirjasto on kesällä suljettu?
+    en: When is the library closed in the summer?
+    vi: Thư viện đóng cửa vào thời gian nào trong mùa hè?
+  - id: u05
+    fi: Onko uimahallissa sauna?
+    en: Is there a sauna at the swimming hall?
+    vi: Hồ bơi có phòng xông hơi không?
+  - id: u06
+    fi: Miten saan suomalaisen ajokortin?
+    en: How do I get a Finnish driving licence?
+    vi: Làm sao để lấy bằng lái xe ở Phần Lan?
+  - id: u07
+    fi: Miten rekisteröin yrityksen?
+    en: How do I register a company?
+    vi: Làm sao để đăng ký thành lập công ty?
+  - id: u08
+    fi: Paljonko päivähoito maksaa?
+    en: How much does daycare cost?
+    vi: Gửi trẻ ở nhà trẻ tốn bao nhiêu tiền?
