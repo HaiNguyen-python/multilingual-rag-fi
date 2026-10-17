@@ -1,0 +1,619 @@
+# Small bilingual glossary used by the offline translator (a stand-in for a real MT model).
+#
+# Keys are English or Vietnamese words/phrases (lowercase). Values are Finnish base forms; the
+# Finnish analyser stems them, so "kortti" also matches "kortin" and "kortilla". A value may hold
+# several Finnish words. The longest matching phrase wins, so "library card" beats "card".
+# Stopwords are dropped (they carry no retrieval signal).
+#
+# Written from the vocabulary of the corpus pages, before the evaluation questions were run,
+# and not tuned afterwards to fix misses. See docs/decisions.md.
+
+stopwords:
+  en: [a, an, and, are, as, at, be, by, can, could, do, does, did, for, from, get, got, how,
+       i, if, in, is, it, me, my, of, "on", or, should, that, the, this, to, was, what, when,
+       where, which, who, why, will, with, you, your, much, many, long, there, have, has,
+       need, must, am, any, anything, there, they, their, our, we, about, after, before,
+       happens, happen, someone, something, way, which, s, t, don, doesn]
+  vi: [tôi, của, là, có, không, được, có được, thì, mà, và, hay, hoặc, ở, ở đâu, đâu,
+       khi nào, bao giờ, bao lâu, bao nhiêu, như thế nào, thế nào, làm sao, làm sao để,
+       làm gì, gì, nào, cho, với, các, những, một, để, này, đó, cần, phải, nên, vào, trong,
+       nếu, bị, đi, ạ, mình, người, có thể, thể, từ, lên, đến, lại, mấy, điều gì, xảy ra,
+       khi, sao, ai, thế, nhé, vậy, muốn, hãy, về, sau, trước, mang]
+
+en:
+  # library
+  library card: kirjastokortti
+  library cards: kirjastokortti
+  online library: verkkokirjasto
+  library: kirjasto
+  card: kortti
+  cards: kortti
+  books: kirja
+  book: kirja
+  loan period: laina-aika
+  loans: laina
+  loan: laina
+  borrowing: lainaaminen lainata
+  borrowed: lainata
+  borrow: lainata
+  returning: palauttaminen palauttaa
+  return: palauttaa
+  renewal: uusiminen uusia
+  renew: uusia
+  reservation: varaus
+  reserved: varata varaus
+  reserve: varata
+  pickup shelf: noutohylly
+  pick-up shelf: noutohylly
+  shelf: hylly
+  late fees: myöhästymismaksu
+  late fee: myöhästymismaksu
+  overdue: myöhästymismaksu
+  fees: maksu
+  fee: maksu
+  costs: maksaa
+  cost: maksaa
+  price: hinta
+  pay: maksaa
+  free of charge: maksuton maksutta
+  for free: maksuton maksutta
+  free: maksuton maksutta
+  euros: euroa
+  euro: euroa
+  identity document: henkilöllisyystodistus
+  identification: henkilöllisyystodistus
+  id card: henkilökortti
+  id: henkilöllisyystodistus
+  passport: passi
+  driving licence: ajokortti
+  driving license: ajokortti
+  driver's license: ajokortti
+  address: osoite
+  pin code: pin-koodi
+  pin: pin-koodi
+  children: lapsi
+  child: lapsi
+  kids: lapsi
+  kid: lapsi
+  young people: nuori
+  guardian: huoltaja
+  parent: huoltaja
+  parents: huoltaja
+  consent: suostumus
+  lost: kadonnut
+  lose: kadonnut
+  new: uusi
+  computers: tietokone
+  computer: tietokone
+  printing: tulostaminen tuloste
+  print: tulostaminen tuloste
+  printout: tuloste
+  colour: väri
+  color: väri
+  scanning: skannaus
+  scan: skannaus
+  room: tila
+  rooms: tila
+  group study room: ryhmätyötila
+  group work room: ryhmätyötila
+  meeting room: kokoushuone
+  sewing machine: ompelukone
+  drill: porakone
+  board games: lautapeli
+  board game: lautapeli
+  sports equipment: urheiluväline
+  equipment: laite
+  devices: laite
+  device: laite
+  # transport
+  public transport: joukkoliikenne
+  tickets: lippu
+  ticket: lippu
+  single ticket: kertalippu
+  day ticket: vuorokausilippu
+  season ticket: kausilippu
+  monthly ticket: kausilippu
+  travel card: matkakortti
+  bus: bussi
+  buses: bussi
+  driver: kuljettaja
+  mobile app: mobiilisovellus
+  app: mobiilisovellus
+  ticket machine: lippuautomaatti
+  cash: käteinen
+  bank card: pankkikortti
+  debit card: pankkikortti
+  credit card: pankkikortti
+  valid: voimassa
+  validity: voimassaoloaika voimassa
+  minutes: minuutti
+  hours: tunti
+  hour: tunti
+  transfer: vaihtaa
+  change buses: vaihtaa bussi
+  discount: alennus
+  students: opiskelija
+  student: opiskelija
+  student card: opiskelijakortti
+  ticket inspection: lipuntarkastus
+  penalty fare: tarkastusmaksu
+  fine: tarkastusmaksu sakko
+  service point: asiointipiste palvelupiste
+  load: ladata
+  top up: ladata
+  unlimited: rajattomasti
+  parking: pysäköinti
+  park: pysäköidä
+  resident parking permit: asukaspysäköintitunnus
+  resident parking: asukaspysäköinti
+  parking permit: asukaspysäköintitunnus
+  permit: lupa tunnus
+  car: auto
+  windscreen: tuulilasi
+  windshield: tuulilasi
+  electronic: sähköinen
+  month: kuukausi
+  months: kuukausi
+  # housing
+  change of address: muuttoilmoitus
+  address change: muuttoilmoitus
+  moving notification: muuttoilmoitus
+  moving: muutto
+  move: muutto
+  report: ilmoittaa ilmoitus
+  notification: ilmoitus
+  notify: ilmoittaa
+  deadline: viimeistään
+  week: viikko
+  weeks: viikko
+  online: verkossa
+  form: lomake
+  mail forwarding: jälkilähetys
+  forward mail: jälkilähetys
+  forwarded: jälkilähetys
+  mail: posti
+  post: posti
+  family: perhe
+  # waste
+  waste: jäte
+  rubbish: jäte
+  trash: jäte
+  garbage: jäte
+  sorting: lajittelu lajitella
+  sort: lajittelu lajitella
+  recycling: kierrättää kierrätys
+  recycle: kierrättää kierrätys
+  biowaste: biojäte
+  food waste: biojäte
+  organic waste: biojäte
+  coffee grounds: kahvinporot
+  plastic bag: muovipussi
+  bag: pussi
+  plastic packaging: muovipakkaus
+  plastic: muovi
+  milk cartons: maitotölkki
+  milk carton: maitotölkki
+  carton: kartonki
+  cardboard: kartonki
+  glass: lasi
+  metal: metalli
+  mixed waste: sekajäte
+  diapers: vaippa
+  diaper: vaippa
+  nappies: vaippa
+  deposit bottles: pantillinen pullo
+  deposit: pantti
+  bottles: pullo
+  bottle: pullo
+  cans: tölkki
+  return machine: palautusautomaatti
+  reverse vending machine: palautusautomaatti
+  shop: kauppa
+  store: kauppa
+  hazardous waste: vaarallinen jäte
+  paint: maali
+  batteries: paristo akku
+  battery: paristo akku
+  medicines: lääke
+  medicine: lääke
+  medication: lääke
+  pharmacy: apteekki
+  needles: neula
+  syringe: ruisku
+  electronics: elektroniikka sähkölaite
+  electrical appliances: sähkölaite
+  phone: puhelin
+  tv: televisio
+  television: televisio
+  fridge: jääkaappi
+  broken: rikkinäinen
+  waste station: jäteasema
+  recycling station: jäteasema
+  opening hours: aukioloaika avoinna
+  open: avoinna
+  saturday: lauantai
+  sunday: sunnuntai
+  weekdays: arki
+  weekend: viikonloppu
+  furniture: huonekalu
+  mattress: patja
+  bicycle: polkupyörä
+  bike: polkupyörä
+  bulky waste: suurikokoinen jäte
+  pick up: nouto
+  pickup: nouto
+  picked up: nouto
+  collection: nouto keräys
+  home: koti
+  recycling centre: kierrätyskeskus
+  clothes: vaate
+  # health
+  health centre: terveysasema
+  health center: terveysasema
+  health clinic: terveysasema
+  book an appointment: varata aika ajanvaraus
+  make an appointment: varata aika ajanvaraus
+  appointment: aika ajanvaraus vastaanotto
+  doctor's visit: lääkärikäynti
+  doctor: lääkäri
+  nurse: hoitaja
+  call: soittaa
+  chat: chat
+  callback: soittopyyntö
+  visit: käynti
+  cancel: perua
+  emergency number: hätänumero
+  emergency: hätätilanne päivystys
+  urgent care: päivystys kiireellinen hoito
+  urgent: kiireellinen
+  life-threatening: henkeä uhkaava
+  chest pain: rintakipu
+  hospital: sairaala
+  dental care: hammashoito
+  dentist: hammashoito hammashoitola
+  toothache: hammassärky
+  tooth: hammas
+  filling: paikkaus
+  check-up: tutkimus
+  examination: tutkimus
+  # education and leisure
+  courses: kurssi
+  course: kurssi
+  adult education centre: työväenopisto
+  adult education: työväenopisto
+  sign up: ilmoittautua ilmoittautuminen
+  register: ilmoittautua ilmoittautuminen
+  enrol: ilmoittautua ilmoittautuminen
+  enroll: ilmoittautua ilmoittautuminen
+  registration: ilmoittautuminen
+  course fees: kurssimaksu
+  course fee: kurssimaksu
+  unemployed: työtön
+  finnish course: suomen kielen kurssi
+  finnish: suomi suomen kieli
+  language: kieli
+  placement test: tasotesti
+  level test: tasotesti
+  evening course: iltakurssi
+  online course: verkkokurssi
+  language exam: kielitutkinto
+  language test: kielitutkinto
+  yki test: yki kielitutkinto
+  yki: yki kielitutkinto
+  childcare: lastenhoito
+  semester: lukukausi
+  term: lukukausi
+  swimming hall: uimahalli
+  swimming pool: uimahalli
+  pool: uimahalli
+  swimming: uinti
+  swim: uinti
+  adults: aikuinen
+  adult: aikuinen
+  series ticket: sarjalippu
+  shower: peseytyä
+  accessible: esteetön
+  # tax
+  tax card: verokortti
+  revised tax card: muutosverokortti
+  tax rate: veroprosentti
+  tax percentage: veroprosentti
+  withholding rate: veroprosentti
+  tax: vero
+  taxes: vero
+  employer: työnantaja
+  salary: palkka
+  wages: palkka
+  income: tulo
+  withholding: pidättää
+  withhold: pidättää
+  order: tilata
+  online banking credentials: verkkopankkitunnukset
+  bank credentials: verkkopankkitunnukset
+  second job: sivutyö
+  side income: sivutulo
+  job: työ
+  work: työ
+  residual tax: jäännösvero
+  back tax: jäännösvero
+  pay rise: palkankorotus
+  raise: palkankorotus
+  estimate: arvio tuloarvio
+
+vi:
+  # library
+  thẻ thư viện: kirjastokortti
+  thư viện trực tuyến: verkkokirjasto
+  thư viện: kirjasto
+  thẻ: kortti
+  sách: kirja
+  mượn sách: lainata kirja
+  mượn: lainata
+  trả sách: palauttaa kirja
+  trả lại: palauttaa
+  trả tiền: maksaa
+  trả: palauttaa
+  gia hạn: uusia
+  đặt trước: varata varaus
+  đặt chỗ: varata
+  kệ nhận sách: noutohylly
+  kệ: hylly
+  phí trễ hạn: myöhästymismaksu
+  phí trả trễ: myöhästymismaksu
+  trễ hạn: myöhästymismaksu
+  quá hạn: myöhästymismaksu
+  trễ: myöhässä
+  lệ phí: maksu
+  phí: maksu
+  giá bao nhiêu: maksaa
+  bao nhiêu tiền: maksaa
+  giá: hinta
+  tốn: maksaa
+  mất phí: maksu
+  miễn phí: maksuton maksutta
+  euro: euroa
+  giấy tờ tùy thân: henkilöllisyystodistus
+  chứng minh thư: henkilökortti
+  căn cước: henkilökortti
+  hộ chiếu: passi
+  bằng lái xe: ajokortti
+  giấy phép lái xe: ajokortti
+  địa chỉ: osoite
+  mã pin: pin-koodi
+  trẻ em: lapsi
+  trẻ nhỏ: lapsi
+  trẻ: lapsi
+  thanh thiếu niên: nuori
+  người giám hộ: huoltaja
+  phụ huynh: huoltaja
+  cha mẹ: huoltaja
+  sự đồng ý: suostumus
+  đồng ý: suostumus
+  bị mất: kadonnut
+  mất: kadonnut
+  mới: uusi
+  máy tính: tietokone
+  in tài liệu: tulostaminen tuloste
+  in: tulostaminen tuloste
+  màu: väri
+  quét: skannaus
+  phòng học nhóm: ryhmätyötila
+  phòng làm việc nhóm: ryhmätyötila
+  phòng họp: kokoushuone
+  phòng: tila
+  máy may: ompelukone
+  máy khoan: porakone
+  trò chơi cờ bàn: lautapeli
+  dụng cụ thể thao: urheiluväline
+  thiết bị: laite
+  # transport
+  giao thông công cộng: joukkoliikenne
+  vé lượt: kertalippu
+  vé một lượt: kertalippu
+  vé đơn: kertalippu
+  vé ngày: vuorokausilippu
+  vé tháng: kausilippu
+  vé định kỳ: kausilippu
+  vé nhiều lượt: sarjalippu
+  vé: lippu
+  thẻ đi lại: matkakortti
+  thẻ đi xe: matkakortti
+  thẻ xe buýt: matkakortti
+  xe buýt: bussi
+  tài xế: kuljettaja
+  ứng dụng: mobiilisovellus
+  máy bán vé: lippuautomaatti
+  tiền mặt: käteinen
+  thẻ ngân hàng: pankkikortti
+  còn hiệu lực: voimassa
+  có hiệu lực: voimassa
+  hiệu lực: voimassa
+  phút: minuutti
+  mấy giờ: kello aukioloaika
+  giờ: tunti kello
+  đổi xe: vaihtaa
+  chuyển xe: vaihtaa
+  giảm giá: alennus
+  sinh viên: opiskelija
+  học sinh: opiskelija
+  thẻ sinh viên: opiskelijakortti
+  kiểm tra vé: lipuntarkastus
+  soát vé: lipuntarkastus
+  tiền phạt: tarkastusmaksu sakko
+  bị phạt: tarkastusmaksu sakko
+  phạt: tarkastusmaksu sakko
+  điểm dịch vụ: asiointipiste palvelupiste
+  điểm giao dịch: asiointipiste palvelupiste
+  nạp tiền: ladata
+  nạp: ladata
+  không giới hạn: rajattomasti
+  giấy phép đỗ xe: asukaspysäköintitunnus
+  đỗ xe: pysäköinti pysäköidä
+  đậu xe: pysäköinti pysäköidä
+  cư dân: asukas
+  giấy phép: lupa tunnus
+  xe hơi: auto
+  ô tô: auto
+  kính chắn gió: tuulilasi
+  điện tử: sähköinen
+  tháng: kuukausi
+  # housing
+  thay đổi địa chỉ: muuttoilmoitus
+  đổi địa chỉ: muuttoilmoitus
+  báo chuyển nhà: muuttoilmoitus
+  chuyển nhà: muutto
+  thông báo: ilmoittaa ilmoitus
+  báo: ilmoittaa ilmoitus
+  tuần: viikko
+  trực tuyến: verkossa
+  online: verkossa
+  mẫu đơn: lomake
+  chuyển tiếp thư: jälkilähetys
+  thư từ: posti
+  thư: posti
+  gia đình: perhe
+  # waste
+  rác thải nguy hại: vaarallinen jäte
+  rác nguy hại: vaarallinen jäte
+  rác hữu cơ: biojäte
+  rác thực phẩm: biojäte
+  rác sinh học: biojäte
+  rác hỗn hợp: sekajäte
+  rác thường: sekajäte
+  rác cồng kềnh: suurikokoinen jäte
+  rác thải: jäte
+  rác: jäte
+  phân loại rác: lajittelu jäte
+  phân loại: lajittelu lajitella
+  tái chế: kierrättää kierrätys
+  bã cà phê: kahvinporot
+  túi ni lông: muovipussi
+  túi nhựa: muovipussi
+  túi: pussi
+  bao bì nhựa: muovipakkaus
+  nhựa: muovi
+  hộp sữa giấy: maitotölkki
+  hộp sữa: maitotölkki
+  hộp giấy: kartonki
+  bìa các tông: kartonki
+  thủy tinh: lasi
+  kim loại: metalli
+  tã bỉm: vaippa
+  tã: vaippa
+  bỉm: vaippa
+  tiền ký gửi: pantti
+  tiền cọc: pantti
+  chai: pullo
+  lon: tölkki
+  máy trả chai: palautusautomaatti
+  cửa hàng: kauppa
+  siêu thị: kauppa
+  sơn: maali
+  pin: paristo akku
+  ắc quy: akku
+  thuốc: lääke
+  hiệu thuốc: apteekki
+  nhà thuốc: apteekki
+  kim tiêm: neula ruisku
+  đồ điện tử: elektroniikka sähkölaite
+  thiết bị điện: sähkölaite
+  điện thoại: puhelin
+  tivi: televisio
+  ti vi: televisio
+  truyền hình: televisio
+  tủ lạnh: jääkaappi
+  bị hỏng: rikkinäinen
+  hỏng: rikkinäinen
+  trạm xử lý rác: jäteasema
+  trạm tái chế: jäteasema
+  trạm rác: jäteasema
+  giờ mở cửa: aukioloaika avoinna
+  mở cửa: avoinna
+  thứ bảy: lauantai
+  chủ nhật: sunnuntai
+  ngày thường: arki
+  cuối tuần: viikonloppu
+  đồ nội thất: huonekalu
+  nệm: patja
+  xe đạp: polkupyörä
+  đến lấy: nouto
+  thu gom: nouto keräys
+  lấy: nouto
+  nhà: koti
+  trung tâm tái chế: kierrätyskeskus
+  quần áo: vaate
+  # health
+  trạm y tế: terveysasema
+  trung tâm y tế: terveysasema
+  đặt lịch hẹn: varata aika ajanvaraus
+  đặt lịch khám: varata aika ajanvaraus
+  đặt lịch: varata aika ajanvaraus
+  đặt hẹn: varata aika ajanvaraus
+  lịch hẹn: aika ajanvaraus
+  cuộc hẹn: aika ajanvaraus
+  khám bác sĩ: lääkärikäynti
+  khám: vastaanotto käynti
+  bác sĩ: lääkäri
+  y tá: hoitaja
+  gọi điện: soittaa
+  gọi: soittaa
+  hủy: perua
+  số khẩn cấp: hätänumero
+  số cấp cứu: hätänumero
+  cấp cứu: päivystys hätätilanne
+  khẩn cấp: kiireellinen
+  nguy hiểm đến tính mạng: henkeä uhkaava
+  đau ngực: rintakipu
+  bệnh viện: sairaala
+  nha khoa: hammashoito
+  chăm sóc răng: hammashoito
+  đau răng: hammassärky
+  trám răng: paikkaus
+  răng: hammas
+  kiểm tra: tutkimus
+  # education and leisure
+  khóa học: kurssi
+  lớp học: kurssi
+  giáo dục người lớn: työväenopisto
+  đăng ký: ilmoittautua ilmoittautuminen
+  học phí: kurssimaksu
+  người thất nghiệp: työtön
+  thất nghiệp: työtön
+  tiếng phần lan: suomen kieli
+  tiếng: kieli
+  ngôn ngữ: kieli
+  kiểm tra trình độ: tasotesti
+  lớp buổi tối: iltakurssi
+  khóa học trực tuyến: verkkokurssi
+  kỳ thi ngôn ngữ: kielitutkinto
+  luyện thi: valmentaa tutkinto
+  thi: tutkinto
+  yki: yki kielitutkinto
+  trông trẻ: lastenhoito
+  giữ trẻ: lastenhoito
+  học kỳ: lukukausi
+  hồ bơi: uimahalli
+  bể bơi: uimahalli
+  bơi: uinti
+  người lớn: aikuinen
+  # tax
+  thẻ thuế điều chỉnh: muutosverokortti
+  thay đổi thẻ thuế: muutosverokortti
+  thẻ thuế: verokortti
+  thuế suất: veroprosentti
+  tỷ lệ thuế: veroprosentti
+  thuế còn nợ: jäännösvero
+  thuế truy thu: jäännösvero
+  thuế: vero
+  người sử dụng lao động: työnantaja
+  chủ lao động: työnantaja
+  lương: palkka
+  tăng lương: palkankorotus
+  thu nhập phụ: sivutulo
+  thu nhập: tulo
+  khấu trừ: pidättää
+  mã ngân hàng trực tuyến: verkkopankkitunnukset
+  việc phụ: sivutyö
+  công việc: työ
+  việc làm: työ
+  ước tính: arvio tuloarvio
